@@ -38,12 +38,12 @@ console.log(JSON.stringify(inventory.items));
 
 //Task 7
 
-let employees = [
+let employees= [
     {name: "Alice", positon: "Developer" ,salary: 70000},
     {name: "Bob", position: "Designer", salary: 45000},
     {name: "CHarlie", position: "Manager", salary: 9000},
-
-function findEmployee(employees,name) {
+];
+function findEmployee(employees ,name) {
     return employees.find(employee => employee.name == name);
 }
 
@@ -57,4 +57,10 @@ let orders2 = [{id: 3, customer: "Charlie"}, {id: 4, customers:"David"}];
 function mergeOrders(orderA, orderB) {
     return [ ...orderA, ... orderB];
 }
-console.log(merge(orders1, orders2));
+console.log(mergeOrders(orders1, orders2));
+
+// EXTRA:
+
+let employee = {name: "Alice", positon: "Developer", salary: 70000}
+
+console.log (`${employee.name} is a ${employee.position} and makes  $${employee.salary}.`)
